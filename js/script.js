@@ -120,3 +120,7 @@ function atualizaProdutoCarrinho (produto) {
  quantidadeEl.textContent = produto.qtd
  totalEl.textContent = produto.total.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
 }
+
+window.onload = function () {
+  
+}
