@@ -1,0 +1,277 @@
+#header {
+    display: flex;
+    flex-direction: row;
+}
+
+#cashEcarrinho {
+    padding: 0px 0px 0px 1000px;
+}
+
+#body_Index {
+    background-image: url("https://images.unsplash.com/photo-1475275083424-b4ff81625b60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80");
+    background-size: cover;
+}
+
+#body_HortiFruti {
+    background-image: url("https://images.unsplash.com/photo-1593014288899-10c42155a704?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+    background-size: cover;
+}
+
+#nav {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+
+#nav h1 {
+    background-color: rebeccapurple;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#navHortiFruti {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+
+#navHortiFruti h1 {
+    background-color: rebeccapurple;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#cash_Setores {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    display: flex;
+    padding: 15px 15px 15px 15px;
+    float: right;
+}
+
+#cash_Setores h2 {
+    color: springgreen;
+    background-color: khaki;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#cash {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    display: flex;
+    padding: 15px 15px 15px 1130px;
+    float: right;
+}
+
+#cash h2 {
+    color: springgreen;
+    background-color: khaki;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#setores {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#subTitulo {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#subTitulo h2 {
+    background-color: rebeccapurple;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+
+#listaProdutos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    width: 95%;
+}
+
+#carrinho {
+    display: flex;
+    /* margin-left: 7%; */
+    padding: 10px 10px 10px 10px;
+    /* align-items: flex-end;
+    float: right;
+    width: auto; */
+}
+
+#carrinho img {
+    width: 65px;
+    height: 65px;
+    padding: 10px;
+}
+
+#carrinho button {
+    background-color: khaki;
+    border-radius: 10px;
+    border: 5px solid khaki;
+}
+
+.navBotao {
+    margin: 5px;
+    padding: 10px 25px 10px 25px;
+    background-color: rebeccapurple;
+    border-radius: 10px;
+}
+
+.divNavBotao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 5px 5px 5px;
+}
+
+.botaoNav {
+    border: 5px solid springgreen;
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    padding: 3px;
+    color: springgreen;
+}
+
+.img {
+    padding: 15px;
+    background-color: rebeccapurple;
+    border-radius: 10px;
+}
+
+.img img {
+    display: flex;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+
+
+.textoSetor {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    color: white;
+}
+
+.produto {
+    margin: 5px;
+}
+
+.carousel {
+    border: 5px solid rebeccapurple;
+    border-radius: 10px;
+}
+
+.carousel-item {
+    width: 100%;
+    height: 538px;
+}
+
+.card {
+    background-color: rebeccapurple;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.card-title {
+    display: flex;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    font-size: 45px;
+}
+
+.card-preço {
+    display: flex;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    font-size: 25px;
+}
+
+.card-quantidade {
+    display: flex;
+    flex-direction: row;
+}
+
+.card-quantidade p {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
+.input {
+    padding: 0px 0px 0px 50px;
+}
+
+.input input {
+    border-radius: 10px;
+    width: 50px;
+    height: 25px;
+    border: 5px solid white;
+}
+
+.card img {
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+.botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botao button {
+    border: 5px solid springgreen;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    color: springgreen;
+}

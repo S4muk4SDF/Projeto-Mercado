@@ -1,0 +1,36 @@
+{
+  "carrinho": [
+    
+  ],
+  "HortiFruti": [
+    {
+      "id": 1,
+      "nome": "Maçã",
+      "preco": 2.5,
+      "img": "https://png.pngtree.com/png-vector/20190418/ourlarge/pngtree-vector-apple-icon-png-image_953049.jpg"
+    },
+
+    {
+      "id": 2,
+      "nome": "Tomate",
+      "preco": 2,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqondq6y4_qmkBhyY_6bapmjDFH9atjQKcPA&usqp=CAU"
+    },
+
+    {
+      "id": 3,
+      "nome": "Banana",
+      "preco": 4.39,
+      "img": "https://image.flaticon.com/icons/png/512/575/575565.png"
+    }
+  ],
+  "Açougue": [
+
+  ],
+  "Bebidas": [
+    
+  ],
+  "Padaria": [
+    
+  ]
+}

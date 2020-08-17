@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link href="../css/style.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <title>Market-Byte - HortiFruti</title>
+      </head>
+      <body id="body_HortiFruti">
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <script src="../js/script.js"></script>
+
+        <br>
+
+        <div id="header">
+            <div id="navHortiFruti">
+                <h1>HORTI - FRUTI</h1>
+            </div>
+
+            <div id="cashEcarrinho">
+                <div id="cash_Setores">
+                    <h2>R$0,00</h2>
+                </div>
+                <div id="carrinho" type="button" class="btn" data-toggle="modal" data-target="#exampleModal">
+                    <a><button><img src="https://image.flaticon.com/icons/png/512/1374/1374128.png" alt=""></button></a>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Seu carrinho:</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        ...
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn btn-primary">Finalizar compra!</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="navbar">
+                <div class="navBotao">
+                    <div class="divNavBotao">
+                        <a href="../htmls/hortiFruti.html"><button class="botaoNav">HortiFruti</button></a>     
+                    </div>
+                </div>
+    
+                <div class="navBotao">
+                    <div class="divNavBotao">
+                        <a href="../htmls/setorDeBebidas.html"><button class="botaoNav">Bebidas</button></a>     
+                    </div>
+                </div>
+    
+                <div class="navBotao">
+                    <div class="divNavBotao">
+                        <a href="../index.html"><button class="botaoNav">Home</button></a>     
+                    </div>
+                </div>
+    
+                <div class="navBotao">
+                    <div class="divNavBotao">
+                        <a href="../htmls/setorDeCarnes.html"><button class="botaoNav">Açougue</button></a>     
+                    </div>
+                </div>
+    
+                <div class="navBotao">
+                    <div class="divNavBotao">
+                        <a href="../htmls/setorDePaes.html"><button class="botaoNav">Padaria</button></a>     
+                    </div>
+                </div>
+        </div>
+        
+          <br><br>
+
+        <div class="container">
+            
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="https://images.unsplash.com/photo-1553546895-531931aa1aa8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1543083477-4f785aeafaa9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1534723570441-4c448d1010e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Próximo</span>
+                </a>
+              </div>
+
+            <br>
+
+            <div id="subTitulo">
+                <h2>PRODUTOS</h2>
+            </div>
+
+            <br><br>
+        </div>
+
+        <div id="listaProdutos">
+
+          <div class="card" style="width: 18rem;">
+              <img src="https://png.pngtree.com/png-vector/20190418/ourlarge/pngtree-vector-apple-icon-png-image_953049.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Maçâ</h5>
+                <p class="card-preço">R$2,50/Kg</p>
+                <div class="card-quantidade">
+                  <p>QUANTIDADE:</p>
+                  <div class="input"><input type="number" id="input_Qtd_Maça"></div>  
+                </div>
+                <div class="botao">
+                  <button id="button_Add_Maca">Adicionar ao carrinho!</button>       
+                </div>
+              </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTqondq6y4_qmkBhyY_6bapmjDFH9atjQKcPA&usqp=CAU" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Tomate</h5>
+                <p class="card-preço">R$2,00/Kg</p>
+                <div class="card-quantidade">
+                  <p>QUANTIDADE:</p>
+                  <div class="input"><input type="number" id="input_Qtd_Tomate"></div>  
+                </div>
+                <div class="botao">
+                  <button id="button_Add_Tomate">Adicionar ao carrinho!</button>            
+                </div>
+              </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+              <img src="https://image.flaticon.com/icons/png/512/575/575565.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Banana</h5>
+                <p class="card-preço">R$4,39/Dúzia</p>
+                <div class="card-quantidade">
+                  <p>QUANTIDADE:</p>
+                  <div class="input"><input type="number" id="input_Qtd_Banana"></div>  
+                </div>
+                <div class="botao">
+                  <button id="button_Add_Banana">Adicionar ao carrinho!</button>             
+                </div>
+              </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJULV-YVc3AhlbyGF-AWJzjmg8_4BxxdHpBQ&usqp=CAU" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Laranja</h5>
+              <p class="card-preço">R$2,89/Kg</p>
+              <div class="card-quantidade">
+                <p>QUANTIDADE:</p>
+                <div class="input"><input type="number" id="input_Qtd_Laranja"></div>  
+              </div>
+              <div class="botao">
+                <button id="button_Add_Laranja">Adicionar ao carrinho!</button>             
+              </div>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+          <img src="https://photos2.fotosearch.com/bthumb/CSP/CSP014/얇게-썰린다-키위-바람-빠진-타이어-아이콘-스톡-일러스트__k33177438.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Kiwi</h5>
+            <p class="card-preço">R$3,90/Kg</p>
+            <div class="card-quantidade">
+              <p>QUANTIDADE:</p>
+              <div class="input"><input type="number" id="input_Qtd_Kiwi"></div>  
+            </div>
+            <div class="botao">
+              <button id="button_Add_Kiwi">Adicionar ao carrinho!</button>             
+            </div>
+          </div>
+      </div>
+
+      </div> 
+
+    </body>
+</html>
+       
