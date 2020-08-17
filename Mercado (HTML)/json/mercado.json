@@ -22,10 +22,27 @@
       "nome": "Banana",
       "preco": 4.39,
       "img": "https://image.flaticon.com/icons/png/512/575/575565.png"
+    },
+    {
+      "id": 4,
+      "nome": "Laranja",
+      "preco": 2.89,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJULV-YVc3AhlbyGF-AWJzjmg8_4BxxdHpBQ&usqp=CAU"
+    },
+    {
+      "id": 5,
+      "nome": "Kiwi",
+      "preco": 3.9,
+      "img": "https://photos2.fotosearch.com/bthumb/CSP/CSP014/얇게-썰린다-키위-바람-빠진-타이어-아이콘-스톡-일러스트__k33177438.jpg"
     }
   ],
-  "Açougue": [
-
+  "Acougue": [
+    {
+      "id": 6,
+      "nome": "Picanha",
+      "preco": 20,
+      "img": "https://i0.statig.com.br/bancodeimagens/c5/xz/as/c5xzasmvuaba63zfz0hitxako.jpg"
+    }
   ],
   "Bebidas": [
     

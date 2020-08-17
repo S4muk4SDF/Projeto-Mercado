@@ -1,92 +1,122 @@
-let carrinho = []
+class Carrinho {
+  constructor() {
+    this.itensNoCarrinho = []
+  }
 
-class ProdutoNoCarrinho {
-  constructor(nome, preco, quantidade) {
-    this.nome = nome
-    this.preco = preco
-    this.quantidade = quantidade
+  adicionaProduto (produto, qtd){
+    let total = produto.preco * qtd
+
+    if (this.itensNoCarrinho.length > 0){
+      let item = this.itensNoCarrinho.find(item => item.id === produto.id)
+      if (item) {
+        item.qtd += qtd
+        total = item.preco * item.qtd
+        item.total = total
+        atualizaProdutoCarrinho(item)
+      } else {
+        criaProdutoCarrinho(produto, qtd, total)
+        this.itensNoCarrinho.push({...produto, qtd, total})
+        // this.itensNoCarrinho.push({
+
+        //   // Da linha 22 até a 25 = ...produto
+        //   id: produto.id,
+        //   nome: produto.nome,
+        //   preco: produto.preco,
+        //   img: produto.img,
+        //   qtd,
+        //   total
+        // })
+      }
+    } else { 
+      criaProdutoCarrinho(produto, qtd, total)
+      this.itensNoCarrinho.push({...produto, qtd, total})
+    }
+  }
+
+  get listaProdutos (){
+    console.log(this.itensNoCarrinho);
+  }
+
+  get totalCarrinho (){
+    return this.itensNoCarrinho.map(item => item.total).reduce((total, valor, index, arr) => {
+      return valor + total
+    })    
   }
 }
 
-window.onload = function () {
+let carrinho = new Carrinho()
 
-  document.getElementById("button_Add_Maca").addEventListener("click", () => {
-    let quantidadeProduto = document.getElementById("input_Qtd_Maça").value
-    let valorProduto = 2.5
-    let nomeProduto = "Maçã"
+function atualizaTotal () {
+  let totalEl = document.querySelector("#cash_Setores h2")
+  totalEl.textContent = carrinho.totalCarrinho.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+}
 
-    let adicionaProduto = {
-      "nome": nomeProduto,
-      "valor": valorProduto,
-      "quantidade": quantidadeProduto
-    }
+function addEvent (produtos) {
+  let botoes = document.querySelectorAll(".button_Add");
+  botoes.forEach(botao => {
+    botao.addEventListener("click", () => {
+      let id = parseInt(botao.getAttribute("data-id"))
+      let produto = buscaProduto(id, produtos);
+      let quantidade = parseInt(pegaQtd(produto.id))
 
-    carrinho.push(adicionaProduto)
+      if (quantidade > 0){
+        carrinho.adicionaProduto(produto, quantidade);
+        atualizaTotal()
+        carrinho.listaProdutos
+        console.log(carrinho.totalCarrinho);
+      } else {
+        console.log("Preecha a quantidade do(a)" + produto.nome);
+      }
 
-    console.log(carrinho);
+    })
   })
+}
 
-  document.getElementById("button_Add_Tomate").addEventListener("click", () => {
-    let quantidadeProduto = document.getElementById("input_Qtd_Tomate").value
-    let valorProduto = 2
-    let nomeProduto = "Tomate"
-
-    let adicionaProduto = {
-      "nome": nomeProduto,
-      "valor": valorProduto,
-      "quantidade": quantidadeProduto
-    }
-
-    carrinho.push(adicionaProduto)
-
-    console.log(carrinho);
+function buscaProduto (id, produtos) {
+  return produtos.find(produto => {
+    return produto.id === id
   })
+}
 
-  document.getElementById("button_Add_Banana").addEventListener("click", () => {
-    let quantidadeProduto = document.getElementById("input_Qtd_Banana").value
-    let valorProduto = 4.39
-    let nomeProduto = "Banana"
+function pegaQtd (produtoId) {
+  let campo = document.querySelector(`#produto${produtoId} .input_Qtd`);
+  return campo.value
+}
 
-    let adicionaProduto = {
-      "nome": nomeProduto,
-      "valor": valorProduto,
-      "quantidade": quantidadeProduto
-    }
+function criaCard (produto) {
+  let cards = document.getElementById("listaProdutos")
+  cards.innerHTML += `<div class="card" id="produto${produto.id}" style="width: 18rem;">
+  <img src="${produto.img}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">${produto.nome}</h5>
+    <p class="card-preço">${produto.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</p>
+    <div class="card-quantidade">
+      <p>QUANTIDADE:</p>
+      <div class="input"><input type="number" class="input_Qtd"></div>  
+    </div>
+    <div class="botao">
+      <button class="button_Add" data-id="${produto.id}">Adicionar ao carrinho!</button>       
+    </div>
+  </div>
+</div>`
+}
 
-    carrinho.push(adicionaProduto)
+function criaProdutoCarrinho (produto, quantidade, total) {
+  let tabela = document.getElementById("lista_Carrinho")
+  tabela.innerHTML += `<tr id="produto_Carrinho_${produto.id}">
+  <td><img src="${produto.img}" alt="" class="img_Carrinho"></td>
+  <td>${produto.nome}</td>
+  <td class="quantidade_Carrinho">${quantidade}</td>
+  <td>${produto.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</td>
+  <td class="total_Carrinho">${total.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</td>
+</tr>`
+}
 
-    console.log(carrinho);
-  })
+function atualizaProdutoCarrinho (produto) {
+ let elemento = document.getElementById(`produto_Carrinho_${produto.id}`)
+ let quantidadeEl = elemento.querySelector('.quantidade_Carrinho')
+ let totalEl = elemento.querySelector('.total_Carrinho')
 
-  document.getElementById("button_Add_Laranja").addEventListener("click", () => {
-    let quantidadeProduto = document.getElementById("input_Qtd_Laranja").value
-    let valorProduto = 2.89
-    let nomeProduto = "Laranja"
-
-    let adicionaProduto = {
-      "nome": nomeProduto,
-      "valor": valorProduto,
-      "quantidade": quantidadeProduto
-    }
-
-    carrinho.push(adicionaProduto)
-
-    console.log(carrinho);
-  })
-
-  document.getElementById("button_Add_Kiwi").addEventListener("click", () => {
-    let quantidadeProduto = document.getElementById("input_Qtd_Kiwi").value
-    let valorProduto = 3.9
-    let nomeProduto = "Kiwi"
-
-    let adicionaProduto = {
-      "nome": nomeProduto,
-      "valor": valorProduto,
-      "quantidade": quantidadeProduto
-    }
-
-    carrinho.push(adicionaProduto)
-
-    console.log(carrinho);
-  })
+ quantidadeEl.textContent = produto.qtd
+ totalEl.textContent = produto.total.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
 }

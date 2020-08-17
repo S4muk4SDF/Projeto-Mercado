@@ -12,6 +12,18 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
         <script src="../js/script.js"></script>
+        <script defer>
+          axios.get("http://localhost:3000/HortiFruti")
+          .then(({data}) =>{
+            data.forEach(produto => {
+              criaCard (produto)
+            })
+            addEvent(data)
+          })
+          .catch(err =>{
+            console.log(err);
+          })
+        </script>
 
         <br>
 
@@ -39,7 +51,19 @@
                         </button>
                       </div>
                       <div class="modal-body">
-                        ...
+                        <table class="table table-striped">
+                          <thead>
+                            <tr>
+                              <th scope="col"></th>
+                              <th scope="col">Nome</th>
+                              <th scope="col">Quantidade</th>
+                              <th scope="col">Valor Unitário</th>
+                              <th scope="col">Valor Total</th>
+                            </tr>
+                          </thead>
+                          <tbody id="lista_Carrinho">                                    
+                          </tbody>
+                        </table>
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
@@ -124,83 +148,7 @@
         </div>
 
         <div id="listaProdutos">
-
-          <div class="card" style="width: 18rem;">
-              <img src="https://png.pngtree.com/png-vector/20190418/ourlarge/pngtree-vector-apple-icon-png-image_953049.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Maçâ</h5>
-                <p class="card-preço">R$2,50/Kg</p>
-                <div class="card-quantidade">
-                  <p>QUANTIDADE:</p>
-                  <div class="input"><input type="number" id="input_Qtd_Maça"></div>  
-                </div>
-                <div class="botao">
-                  <button id="button_Add_Maca">Adicionar ao carrinho!</button>       
-                </div>
-              </div>
-          </div>
-
-          <div class="card" style="width: 18rem;">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTqondq6y4_qmkBhyY_6bapmjDFH9atjQKcPA&usqp=CAU" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Tomate</h5>
-                <p class="card-preço">R$2,00/Kg</p>
-                <div class="card-quantidade">
-                  <p>QUANTIDADE:</p>
-                  <div class="input"><input type="number" id="input_Qtd_Tomate"></div>  
-                </div>
-                <div class="botao">
-                  <button id="button_Add_Tomate">Adicionar ao carrinho!</button>            
-                </div>
-              </div>
-          </div>
-
-          <div class="card" style="width: 18rem;">
-              <img src="https://image.flaticon.com/icons/png/512/575/575565.png" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Banana</h5>
-                <p class="card-preço">R$4,39/Dúzia</p>
-                <div class="card-quantidade">
-                  <p>QUANTIDADE:</p>
-                  <div class="input"><input type="number" id="input_Qtd_Banana"></div>  
-                </div>
-                <div class="botao">
-                  <button id="button_Add_Banana">Adicionar ao carrinho!</button>             
-                </div>
-              </div>
-          </div>
-
-          <div class="card" style="width: 18rem;">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJULV-YVc3AhlbyGF-AWJzjmg8_4BxxdHpBQ&usqp=CAU" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Laranja</h5>
-              <p class="card-preço">R$2,89/Kg</p>
-              <div class="card-quantidade">
-                <p>QUANTIDADE:</p>
-                <div class="input"><input type="number" id="input_Qtd_Laranja"></div>  
-              </div>
-              <div class="botao">
-                <button id="button_Add_Laranja">Adicionar ao carrinho!</button>             
-              </div>
-            </div>
-        </div>
-
-        <div class="card" style="width: 18rem;">
-          <img src="https://photos2.fotosearch.com/bthumb/CSP/CSP014/얇게-썰린다-키위-바람-빠진-타이어-아이콘-스톡-일러스트__k33177438.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Kiwi</h5>
-            <p class="card-preço">R$3,90/Kg</p>
-            <div class="card-quantidade">
-              <p>QUANTIDADE:</p>
-              <div class="input"><input type="number" id="input_Qtd_Kiwi"></div>  
-            </div>
-            <div class="botao">
-              <button id="button_Add_Kiwi">Adicionar ao carrinho!</button>             
-            </div>
-          </div>
-      </div>
-
-      </div> 
+        </div> 
 
     </body>
 </html>
