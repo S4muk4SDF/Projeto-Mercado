@@ -109,6 +109,7 @@ function criaProdutoCarrinho (produto, quantidade, total) {
   <td class="quantidade_Carrinho">${quantidade}</td>
   <td>${produto.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</td>
   <td class="total_Carrinho">${total.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</td>
+  <td class="botao_Remove"><button><img src="https://image.flaticon.com/icons/svg/458/458594.svg"></img></button></td>
 </tr>`
 }
 
@@ -121,6 +122,3 @@ function atualizaProdutoCarrinho (produto) {
  totalEl.textContent = produto.total.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
 }
 
-window.onload = function () {
-  
-}

@@ -41,13 +41,107 @@
       "id": 6,
       "nome": "Picanha",
       "preco": 20,
-      "img": "https://i0.statig.com.br/bancodeimagens/c5/xz/as/c5xzasmvuaba63zfz0hitxako.jpg"
+      "img": "https://loja.mayd.online/arquivos/icone-churrasco2.png?v=637105556382200000"
+    },
+
+    {
+      "id": 7,
+      "nome": "Frango",
+      "preco": 6.39,
+      "img": "https://image.flaticon.com/icons/png/512/121/121910.png"
+    },
+
+    {
+      "id": 8,
+      "nome": "Linguiça",
+      "preco": 3.69,
+      "img": "https://cursolinguicaartesanaltop.com/wp-content/uploads/2020/04/ling-icon.png"
+    },
+
+    {
+      "id": 9,
+      "nome": "Bacon",
+      "preco": 5.3,
+      "img": "https://media.gettyimages.com/vectors/bacon-flat-design-breakfast-icon-vector-id1015661246"
+    },
+
+    {
+      "id": 10,
+      "nome": "Bife",
+      "preco": 7.35,
+      "img": "https://png.pngtree.com/png-vector/20190215/ourlarge/pngtree-vector-steak-icon-png-image_537882.jpg"
     }
   ],
   "Bebidas": [
-    
+    {
+      "id": 11,
+      "nome": "Coca-Cola",
+      "preco": 8.5,
+      "img": "https://icon-library.com/images/drinks-04-512_6436.png"
+    },
+
+    {
+      "id": 12,
+      "nome": "Champagne",
+      "preco": 10.45,
+      "img": "https://travelpedia.com.br/wp-content/uploads/2017/11/champagne-icon.png"
+    },
+
+    {
+      "id": 13,
+      "nome": "Cerveja",
+      "preco": 2.39,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSLDtjRk20rHVuzBz6-ONQ28JBNvaKWXv-9hA&usqp=CAU"
+    },
+
+    {
+      "id": 14,
+      "nome": "Café",
+      "preco": 3.79,
+      "img": "https://png.pngtree.com/png-clipart/20190630/original/pngtree-vector-coffee-icon-png-image_4159720.jpg"
+    },
+
+    {
+      "id": 15,
+      "nome": "Vinho",
+      "preco": 13.45,
+      "img": "https://images.vexels.com/media/users/3/129051/isolated/preview/0beb91ff628653682a6162dfdf174a26---cone-de-c--rculo-de-copo-de-vinho-by-vexels.png"
+    }
   ],
   "Padaria": [
-    
+    {
+      "id": 16,
+      "nome": "Pão",
+      "preco": 0.45,
+      "img": "https://alfamas.com.br/wp-content/uploads/2018/08/padaria-campo-belo-paes-icone2.png"
+    },
+
+    {
+      "id": 17,
+      "nome": "Bolo",
+      "preco": 7.59,
+      "img": "https://static.vecteezy.com/system/resources/previews/000/626/222/non_2x/vector-birthday-cake-flat-icon-with-long-shadow.jpg"
+    },
+
+    {
+      "id": 18,
+      "nome": "Leite",
+      "preco": 2.39,
+      "img": "https://static.vecteezy.com/system/resources/previews/000/442/679/non_2x/vector-milk-icon.jpg"
+    },
+
+    {
+      "id": 19,
+      "nome": "Queijo",
+      "preco": 4.15,
+      "img": "https://png.pngtree.com/png-clipart/20190619/original/pngtree-vector-cheese-icon-png-image_3992498.jpg"
+    },
+
+    {
+      "id": 20,
+      "nome": "Presunto",
+      "preco": 4.29,
+      "img": "https://media.gettyimages.com/vectors/cured-han-meat-icon-vector-id1008009264?s=612x612"
+    }
   ]
 }
