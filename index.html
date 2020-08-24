@@ -16,14 +16,102 @@
 
 <body id="body_Index">
 
-    <header>
-        <div id="nav">
-          <h1>MARKET BYTE</h1>
-            <div id="cash">
-                <h2>R$0,00</h2>
-            </div>
+    <div id="header">
+        <div id="navHortiFruti">
+            <h1>MARKET BYTE</h1>
         </div>
-    </header>
+
+        <div>
+            <div id="botao_Cadastrar">
+                <a><button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModal"><h2>Cadastrar-se</h2></button></a>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-row">
+                                  <div class="form-group col-md-6">
+                                    <label for="inputEmail4" class="cor_Forms">Email</label>
+                                    <input type="email" class="form-control" id="inputEmail4">
+                                  </div>
+                                  <div class="form-group col-md-6">
+                                    <label for="inputPassword4" class="cor_Forms">Senha</label>
+                                    <input type="password" class="form-control" id="inputPassword4">
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <label for="inputAddress" class="cor_Forms">Endereço</label>
+                                  <input type="text" class="form-control" id="inputAddress">
+                                </div>
+                                <div class="form-row">
+                                  <div class="form-group col-md-6">
+                                    <label for="inputCity" class="cor_Forms">Cidade</label>
+                                    <input type="text" class="form-control" id="inputCity">
+                                  </div>
+                                  <div class="form-group col-md-4">
+                                    <label for="inputState" class="cor_Forms">Estado</label>
+                                    <select id="inputState" class="form-control">
+                                      <option selected>Escolha...</option>
+                                      <option>Acre</option>
+                                      <option>Alagoas</option>
+                                      <option>Amapá</option>
+                                      <option>Amazonas</option>
+                                      <option>Bahia</option>
+                                      <option>Ceará</option>
+                                      <option>Espírito Santo</option>
+                                      <option>Goías</option>
+                                      <option>Maranhão</option>
+                                      <option>Mato Grosso</option>
+                                      <option>Mato Grosso do Sul</option>
+                                      <option>Minas Gerais</option>
+                                      <option>Pará</option>
+                                      <option>Paraíba</option>
+                                      <option>Paraná</option>
+                                      <option>Pernambuco</option>
+                                      <option>Piauí</option>
+                                      <option>Rio de Janeiro</option>
+                                      <option>Rio Grande do Norte</option>
+                                      <option>Rio Grande do Sul</option>
+                                      <option>Rondônia</option>
+                                      <option>Roraima</option>
+                                      <option>Santa Catarina</option>
+                                      <option>São Paulo</option>
+                                      <option>Sergipe</option>
+                                      <option>Tocantins</option>
+                                      <option>Distrito Federal</option>
+                                    </select>
+                                  </div>
+                                  <div class="form-group col-md-2">
+                                    <label for="inputZip" class="cor_Forms">Número</label>
+                                    <input type="text" class="form-control" id="inputZip">
+                                  </div>
+                                </div>        
+                                <button type="submit" class="btn btn-primary">Sign in</button>
+                              </form>
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="botao_Cadastrar">
+                <a href="sign-in.html.html"><button><h2>Entrar</h2></button></a>
+            </div>
+            
+        </div>
+    </div>
     
     <div class="container">
 
@@ -110,152 +198,13 @@
         </div>
     </div>
 
+    <br>
+
+    <div class="footer">
+        <p>© 2020 SDF</p>
+        <img src="https://www.arbyte.com.br/img/logo-arbyte.png">
+    </div>
+
 </body>
 
 </html>
-
-
-<!-- <div>
-    <div class="produto">
-        <div class="backImg">
-            <div></div>
-                <img src="https://png.pngtree.com/png-vector/20190418/ourlarge/pngtree-vector-apple-icon-png-image_953049.jpg" alt="">
-            </div>
-
-            <br>
-
-            <div class="textoSetor">
-                <h3>Maçã Pera</h3>
-            </div>
-
-            <br>
-
-            <div class="textoSetor">
-                <h4>R$3,49/Kg</h4>
-            </div>
-        </div>
-
-            <br>
-
-        <div class="backBotao">
-             <div class="divBotao">
-                 <a href=""><button class="botao">Adicionar ao carrinho!</button></a>
-             </div>
-        </div>
-    </div>
-
-
-    <div class="produto">
-        <div class="backImg">
-            <div></div>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTqondq6y4_qmkBhyY_6bapmjDFH9atjQKcPA&usqp=CAU" alt="">
-            </div>
-
-            <br>
-
-            <div class="textoSetor">
-                <h3>Tomate</h3>
-            </div>
-
-            <br>
-
-            <div class="textoSetor">
-                <h4>R$2,00/Kg</h4>
-            </div>
-        </div>
-
-            <br>
-
-        <div class="backBotao">
-             <div class="divBotao">
-                 <a href=""><button class="botao">Adicionar ao carrinho!</button></a>
-             </div>
-        </div>
-    </div>
-
-    <div class="produto">
-        <div class="backImg">
-            <div></div>
-                <img src="https://image.flaticon.com/icons/png/512/575/575565.png" alt="">
-            </div>
-
-            <br>
-
-            <div class="textoSetor">
-                <h3>Banana</h3>
-            </div>
-
-            <br>
-
-            <div class="textoSetor">
-                <h4>R$4,39/Dúzia</h4>
-            </div>
-        </div>
-
-            <br>
-
-        <div class="backBotao">
-             <div class="divBotao">
-                 <a href=""><button class="botao">Adicionar ao carrinho!</button></a>
-             </div>
-        </div>
-    </div>
-
-    <div class="produto">
-        <div class="backImg">
-            <div></div>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTJULV-YVc3AhlbyGF-AWJzjmg8_4BxxdHpBQ&usqp=CAU" alt="">
-            </div>
-
-            <br>
-
-            <div class="textoSetor">
-                <h3>Laranja</h3>
-            </div>
-
-            <br>
-
-            <div class="textoSetor">
-                <h4>R$2,89/Kg</h4>
-            </div>
-        </div>
-
-            <br>
-
-        <div class="backBotao">
-             <div class="divBotao">
-                 <a href=""><button class="botao">Adicionar ao carrinho!</button></a>
-             </div>
-        </div>
-    </div>
-
-    <div class="produto">
-        <div class="backImg">
-            <div></div>
-                <img src="https://photos2.fotosearch.com/bthumb/CSP/CSP014/%EC%96%87%EA%B2%8C-%EC%8D%B0%EB%A6%B0%EB%8B%A4-%ED%82%A4%EC%9C%84-%EB%B0%94%EB%9E%8C-%EB%B9%A0%EC%A7%84-%ED%83%80%EC%9D%B4%EC%96%B4-%EC%95%84%EC%9D%B4%EC%BD%98-%EC%8A%A4%ED%86%A1-%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8__k33177438.jpg" alt="">
-            </div>
-
-            <br>
-
-            <div class="textoSetor">
-                <h3>Kiwi</h3>
-            </div>
-
-            <br>
-
-            <div class="textoSetor">
-                <h4>R$3,90/Kg</h4>
-            </div>
-        </div>
-
-            <br>
-
-        <div class="backBotao">
-             <div class="divBotao">
-                 <a href=""><button class="botao">Adicionar ao carrinho!</button></a>
-             </div>
-        </div>
-    </div>
-</div> -->
-
-

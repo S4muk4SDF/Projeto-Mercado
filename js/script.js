@@ -1,3 +1,4 @@
+// Class para formar o carrinho no site
 class Carrinho {
   constructor() {
     this.itensNoCarrinho = []
@@ -44,8 +45,10 @@ class Carrinho {
   }
 }
 
+// Inicia o carrinho
 let carrinho = new Carrinho()
 
+// Função para atualizar o total das compras no HTML
 function atualizaTotal () {
   let totalEl = document.querySelector("#cash_Setores h2")
   totalEl.textContent = carrinho.totalCarrinho.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
@@ -72,17 +75,20 @@ function addEvent (produtos) {
   })
 }
 
+// Função para buscar os produtos 
 function buscaProduto (id, produtos) {
   return produtos.find(produto => {
     return produto.id === id
   })
 }
 
+// Função para pegar a quantidade escolhida
 function pegaQtd (produtoId) {
   let campo = document.querySelector(`#produto${produtoId} .input_Qtd`);
   return campo.value
 }
 
+// Função para criar os produtos no HTML
 function criaCard (produto) {
   let cards = document.getElementById("listaProdutos")
   cards.innerHTML += `<div class="card" id="produto${produto.id}" style="width: 18rem;">
@@ -101,6 +107,7 @@ function criaCard (produto) {
 </div>`
 }
 
+// Função para colocar os produtos dentro do carrinho no HTML
 function criaProdutoCarrinho (produto, quantidade, total) {
   let tabela = document.getElementById("lista_Carrinho")
   tabela.innerHTML += `<tr id="produto_Carrinho_${produto.id}">
@@ -113,6 +120,7 @@ function criaProdutoCarrinho (produto, quantidade, total) {
 </tr>`
 }
 
+// Função para atualizar o produto que já estiver dentro do carrinho
 function atualizaProdutoCarrinho (produto) {
  let elemento = document.getElementById(`produto_Carrinho_${produto.id}`)
  let quantidadeEl = elemento.querySelector('.quantidade_Carrinho')
@@ -121,4 +129,3 @@ function atualizaProdutoCarrinho (produto) {
  quantidadeEl.textContent = produto.qtd
  totalEl.textContent = produto.total.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
 }
-

@@ -77,22 +77,38 @@
     align-items: center;
 }
 
-#cash {
+#botao_Entrar {
+
+}
+
+#botao_Entrar {
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 25px;
-    display: flex;
-    padding: 15px 15px 15px 1130px;
+    padding: 15px;
     float: right;
 }
 
-#cash h2 {
+#botao_Entrar button {
     color: springgreen;
     background-color: khaki;
+    border: 5px solid khaki;
     padding: 15px;
     border-radius: 10px;
-    display: flex;
-    align-items: center;
+}
+
+#botao_Cadastrar {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 15px;
+    float: right;
+}
+
+#botao_Cadastrar button {
+    color: springgreen;
+    background-color: khaki;
+    border: 5px solid khaki;
+    padding: 15px;
+    border-radius: 10px;
 }
 
 #setores {
@@ -314,4 +330,32 @@
     justify-content: center;
     align-items: center;
 }
+
+.cor_Forms {
+    color: black;
+}
+
+.footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: springgreen;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.footer img {
+    width: 170px;
+    height: 60px;
+    padding: 5px 5px 10px 5px;
+}
+
+.footer p {
+    font-size: 25px;
+    padding: 5px;
+}
+
+ 
 
